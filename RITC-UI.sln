@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34916.146
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RITC-UI", "RITC-UI.csproj", "{BB114348-55B2-4B15-99BE-78364DB4EC99}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB114348-55B2-4B15-99BE-78364DB4EC99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB114348-55B2-4B15-99BE-78364DB4EC99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB114348-55B2-4B15-99BE-78364DB4EC99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB114348-55B2-4B15-99BE-78364DB4EC99}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5A74317B-0655-41B2-91A3-C7CD0F4AAA24}
+	EndGlobalSection
+EndGlobal

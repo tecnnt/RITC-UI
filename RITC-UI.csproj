@@ -1,0 +1,110 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>RITC_UI</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Asset\bundles.json" />
+    <None Remove="Asset\bundles\grassblock.pack" />
+    <None Remove="Asset\bundles\string" />
+    <None Remove="Asset\items\ritcitem\压测礼盒.json" />
+    <None Remove="Asset\items\ritcitem\示例任务物品.json" />
+    <None Remove="Asset\items\ritcitem\示例固定礼盒.json" />
+    <None Remove="Asset\items\ritcitem\示例物品.json" />
+    <None Remove="Asset\items\ritcitem\示例礼盒.json" />
+    <None Remove="Asset\items\ritcitem\示例货币.json" />
+    <None Remove="Asset\items\ritcitem\示例针剂.json" />
+    <None Remove="Asset\items\ritcitem\示例针剂2.json" />
+    <None Remove="Asset\items\ritcitem\示例高级礼盒.json" />
+    <None Remove="Asset\package.json" />
+    <None Remove="Asset\res\avatar\ExampleTrader.jpg" />
+    <None Remove="Asset\res\avatar\ExampleTrader2.jpg" />
+    <None Remove="Asset\res\image\105182833_p0.png" />
+    <None Remove="Asset\res\image\illust_56884409_20190928_114254.jpg" />
+    <None Remove="Asset\res\image\illust_69080429_20190928_113354.png" />
+    <None Remove="Asset\res\image\illust_76542723_20190926_114401.jpg" />
+    <None Remove="Asset\res\locale\quest.json" />
+    <None Remove="Asset\res\locale\text.json" />
+    <None Remove="Asset\SearchMap\Bundle索引.json" />
+    <None Remove="Asset\SearchMap\任务ID查询.json" />
+    <None Remove="Asset\SearchMap\原始任务文件.json" />
+    <None Remove="Asset\SearchMap\原始物品文件.json" />
+    <None Remove="Asset\SearchMap\原始语言文件.json" />
+    <None Remove="Asset\SearchMap\原始跳蚤文件.json" />
+    <None Remove="Asset\SearchMap\商人及地图ID查询.json" />
+    <None Remove="Asset\SearchMap\技能ID查询.json" />
+    <None Remove="Asset\SearchMap\物品ID查询.json" />
+    <None Remove="Asset\SearchMap\藏身处ID查询.json" />
+    <None Remove="Asset\SearchMap\跳蚤市场标签.json" />
+    <None Remove="Asset\traders\AssortData.json" />
+    <None Remove="Asset\traders\GiftData.json" />
+    <None Remove="Asset\traders\questdata\initQuest.json" />
+    <None Remove="Asset\traders\questdata\QuestConditions.json" />
+    <None Remove="Asset\traders\questdata\QuestRewards.json" />
+    <None Remove="Asset\traders\questdata\RepeatableQuests.json" />
+    <None Remove="Asset\traders\RecipeData.json" />
+    <None Remove="Asset\traders\ScavCaseData.json" />
+    <None Remove="Asset\traders\trader\ExampleTrader.json" />
+    <None Remove="Asset\traders\trader\ExampleTrader2.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Asset\bundles.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Asset\bundles\grassblock.pack" />
+    <Content Include="Asset\bundles\string" />
+    <Content Include="Asset\items\ritcitem\压测礼盒.json" />
+    <Content Include="Asset\items\ritcitem\示例任务物品.json" />
+    <Content Include="Asset\items\ritcitem\示例固定礼盒.json" />
+    <Content Include="Asset\items\ritcitem\示例物品.json" />
+    <Content Include="Asset\items\ritcitem\示例礼盒.json" />
+    <Content Include="Asset\items\ritcitem\示例货币.json" />
+    <Content Include="Asset\items\ritcitem\示例针剂.json" />
+    <Content Include="Asset\items\ritcitem\示例针剂2.json" />
+    <Content Include="Asset\items\ritcitem\示例高级礼盒.json" />
+    <Content Include="Asset\package.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Asset\res\avatar\ExampleTrader.jpg" />
+    <Content Include="Asset\res\avatar\ExampleTrader2.jpg" />
+    <Content Include="Asset\res\image\105182833_p0.png" />
+    <Content Include="Asset\res\image\illust_56884409_20190928_114254.jpg" />
+    <Content Include="Asset\res\image\illust_69080429_20190928_113354.png" />
+    <Content Include="Asset\res\image\illust_76542723_20190926_114401.jpg" />
+    <Content Include="Asset\res\locale\quest.json" />
+    <Content Include="Asset\res\locale\text.json" />
+    <Content Include="Asset\SearchMap\Bundle索引.json" />
+    <Content Include="Asset\SearchMap\任务ID查询.json" />
+    <Content Include="Asset\SearchMap\原始任务文件.json" />
+    <Content Include="Asset\SearchMap\原始物品文件.json" />
+    <Content Include="Asset\SearchMap\原始语言文件.json" />
+    <Content Include="Asset\SearchMap\原始跳蚤文件.json" />
+    <Content Include="Asset\SearchMap\商人及地图ID查询.json" />
+    <Content Include="Asset\SearchMap\技能ID查询.json" />
+    <Content Include="Asset\SearchMap\物品ID查询.json" />
+    <Content Include="Asset\SearchMap\藏身处ID查询.json" />
+    <Content Include="Asset\SearchMap\跳蚤市场标签.json" />
+    <Content Include="Asset\traders\AssortData.json" />
+    <Content Include="Asset\traders\GiftData.json" />
+    <Content Include="Asset\traders\questdata\initQuest.json" />
+    <Content Include="Asset\traders\questdata\QuestConditions.json" />
+    <Content Include="Asset\traders\questdata\QuestRewards.json" />
+    <Content Include="Asset\traders\questdata\RepeatableQuests.json" />
+    <Content Include="Asset\traders\RecipeData.json" />
+    <Content Include="Asset\traders\ScavCaseData.json" />
+    <Content Include="Asset\traders\trader\ExampleTrader.json" />
+    <Content Include="Asset\traders\trader\ExampleTrader2.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+</Project>
