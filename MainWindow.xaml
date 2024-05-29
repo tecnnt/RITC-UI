@@ -7,7 +7,21 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TabControl>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="22"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Menu FontSize="14">
+            <MenuItem Header="文件" Width="50"  Height="22">
+                <MenuItem Header="新建" Click="Menu_New_Click" ></MenuItem>
+                <MenuItem Header="打开" Click="Menu_Open_Click"></MenuItem>
+                <MenuItem Header="保存"></MenuItem>
+                <MenuItem Header="另存为"></MenuItem>
+                <MenuItem Header="导出"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="关于" Width="50"/>
+        </Menu>
+        <TabControl Grid.Row="1" FontSize="14">
             <TabItem Header="基础信息">
                 <Grid Background="#FFE5E5E5" x:Name="Package" Initialized="Package_Initialized" DataContext="{Binding }">
                     <Grid.ColumnDefinitions>
@@ -21,7 +35,7 @@
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
         </TabControl>
-
+      
 
     </Grid>
 </Window>

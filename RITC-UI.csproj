@@ -60,15 +60,33 @@
     </Content>
     <Content Include="Asset\bundles\grassblock.pack" />
     <Content Include="Asset\bundles\string" />
-    <Content Include="Asset\items\ritcitem\压测礼盒.json" />
-    <Content Include="Asset\items\ritcitem\示例任务物品.json" />
-    <Content Include="Asset\items\ritcitem\示例固定礼盒.json" />
-    <Content Include="Asset\items\ritcitem\示例物品.json" />
-    <Content Include="Asset\items\ritcitem\示例礼盒.json" />
-    <Content Include="Asset\items\ritcitem\示例货币.json" />
-    <Content Include="Asset\items\ritcitem\示例针剂.json" />
-    <Content Include="Asset\items\ritcitem\示例针剂2.json" />
-    <Content Include="Asset\items\ritcitem\示例高级礼盒.json" />
+    <Content Include="Asset\items\ritcitem\压测礼盒.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Asset\items\ritcitem\示例任务物品.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Asset\items\ritcitem\示例固定礼盒.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Asset\items\ritcitem\示例物品.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Asset\items\ritcitem\示例礼盒.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Asset\items\ritcitem\示例货币.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Asset\items\ritcitem\示例针剂.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Asset\items\ritcitem\示例针剂2.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Asset\items\ritcitem\示例高级礼盒.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Asset\package.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

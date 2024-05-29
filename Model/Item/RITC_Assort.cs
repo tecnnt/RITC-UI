@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RITC_UI.Model
 {
-    public class RITC_AssortItem
+    public class RITC_Assort
     {
         public string? ID { get; set; }
         public string? Trader { get; set; }

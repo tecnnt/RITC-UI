@@ -15,7 +15,7 @@ namespace RITC_UI.Model
     public class Manifest
     {
         public string? key { get; set; }
-        public object[]? dependencyKeys { get; set; }
+        public string[]? dependencyKeys { get; set; }
     }
 
 }

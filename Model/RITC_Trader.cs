@@ -32,7 +32,7 @@ namespace RITC_UI.Model
     public class RITC_Trader_Insurance
     {
         public bool availability { get; set; }
-        public object[]? excluded_category { get; set; }
+        public string[]? excluded_category { get; set; }
         public int max_return_hour { get; set; }
         public int max_storage_time { get; set; }
         public int min_payment { get; set; }
@@ -52,13 +52,13 @@ namespace RITC_UI.Model
     public class RITC_Trader_Items_Buy
     {
         public string[]? category { get; set; }
-        public object[]? id_list { get; set; }
+        public string[]? id_list { get; set; }
     }
 
     public class RITC_Trader_Items_Buy_Prohibited
     {
-        public object[]? category { get; set; }
-        public object[]? id_list { get; set; }
+        public string[]? category { get; set; }
+        public string[]? id_list { get; set; }
     }
 
     public class RITC_Trader_Repair
@@ -66,8 +66,8 @@ namespace RITC_UI.Model
         public bool availability { get; set; }
         public string? currency { get; set; }
         public int currency_coefficient { get; set; }
-        public object[]? excluded_category { get; set; }
-        public object[]? excluded_id_list { get; set; }
+        public string[]? excluded_category { get; set; }
+        public string[]? excluded_id_list { get; set; }
         public string? quality { get; set; }
     }
 

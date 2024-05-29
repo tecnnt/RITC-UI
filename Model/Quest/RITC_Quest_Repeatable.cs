@@ -61,7 +61,7 @@ namespace RITC_UI.Model
 
     public class Exploration
     {
-        public object[]? possibleSkillRewards { get; set; }
+        public string[]? possibleSkillRewards { get; set; }
         public int maxExtracts { get; set; }
         public int maxExtractsWithSpecificExit { get; set; }
         public Specificexits? specificExits { get; set; }
@@ -76,7 +76,7 @@ namespace RITC_UI.Model
 
     public class Pickup
     {
-        public object[]? possibleSkillRewards { get; set; }
+        public string[]? possibleSkillRewards { get; set; }
         public Itemtypetofetchwithmaxcount[]? ItemTypeToFetchWithMaxCount { get; set; }
         public string[]? ItemTypesToFetch { get; set; }
         public int maxItemFetchCount { get; set; }
@@ -91,7 +91,7 @@ namespace RITC_UI.Model
 
     public class Completion
     {
-        public object[]? possibleSkillRewards { get; set; }
+        public string[]? possibleSkillRewards { get; set; }
         public int minRequestedAmount { get; set; }
         public int maxRequestedAmount { get; set; }
         public int uniqueItemCount { get; set; }
@@ -115,12 +115,12 @@ namespace RITC_UI.Model
     public class Elimination
     {
         public Levelrange? levelRange { get; set; }
-        public object[]? possibleSkillRewards { get; set; }
+        public string[]? possibleSkillRewards { get; set; }
         public Target[]? targets { get; set; }
         public int bodyPartProb { get; set; }
         public Bodypart[]? bodyParts { get; set; }
         public float specificLocationProb { get; set; }
-        public object[]? distLocationBlacklist { get; set; }
+        public string[]? distLocationBlacklist { get; set; }
         public int distProb { get; set; }
         public int maxDist { get; set; }
         public int minDist { get; set; }

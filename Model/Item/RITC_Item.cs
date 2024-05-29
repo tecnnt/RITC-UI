@@ -28,15 +28,32 @@ namespace RITC_UI.Model
         public string? CustomLootTarget { get; set; }
         public bool isMoney { get; set; }
         public bool isadvGiftBox { get; set; }
-        public RITC_Item_Advboxdata? advBoxData { get; set; }
+        public RITC_Item_AdvBoxData? advBoxData { get; set; }
+        public RITC_Item_StaticBoxData? StaticBoxData { get; set; }
+        public RITC_Item_BoxData? BoxData { get; set; }
         public int StackMaxSize { get; set; }
     }
 
-    public class RITC_Item_Advboxdata
+    public class RITC_Item_AdvBoxData
     {
         public int count { get; set; }
         public bool forcefindinraid { get; set; }
         public string? giftdata { get; set; }
     }
+
+    public class RITC_Item_StaticBoxData
+    {
+        public int count { get; set; }
+        public bool forcefindinraid { get; set; }
+        public List<RITC_Gift_Item>? giftdata { get; set; }
+    }
+
+    public class RITC_Item_BoxData
+    {
+        public int Count { get; set; }
+        public Dictionary<string, int>? Rewards { get; set; }
+    }
+
+
 
 }
