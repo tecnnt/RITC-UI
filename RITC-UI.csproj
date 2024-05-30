@@ -11,6 +11,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove=".gitattributes" />
+    <None Remove=".gitignore" />
     <None Remove="Asset\bundles.json" />
     <None Remove="Asset\bundles\grassblock.pack" />
     <None Remove="Asset\bundles\string" />
