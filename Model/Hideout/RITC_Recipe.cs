@@ -9,7 +9,7 @@ namespace RITC_UI.Model
     /// <summary>
     /// 藏身处配方
     /// </summary>
-    public class RITC_RecipeItem
+    public class RITC_Recipe
     {
         public string? ID { get; set; }
         public int Area { get; set; }
@@ -20,10 +20,10 @@ namespace RITC_UI.Model
         public bool NeedFuel { get; set; }
         public bool Locked { get; set; }
         public string? Quest { get; set; }
-        public Require? Require { get; set; }
+        public RITC_RecipeItem_Require? Require { get; set; }
     }
 
-    public class Require
+    public class RITC_RecipeItem_Require
     {
         public Dictionary<string,int>? Tool { get; set; }
         public Dictionary<string, int>? Item { get; set; }

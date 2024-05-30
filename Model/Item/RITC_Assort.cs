@@ -10,9 +10,9 @@ namespace RITC_UI.Model
     {
         public string? ID { get; set; }
         public string? Trader { get; set; }
-        public AKI_Item[]? Item { get; set; }
+        public List<AKI_Item>? Item { get; set; }
         public Dictionary<string, DogtagItem>? DogTag { get; set; }
-        public Dictionary<string,int>? Barter { get; set; }
+        public Dictionary<string, int>? Barter { get; set; }
         public int TrustLevel { get; set; }
         public bool isWeapon { get; set; }
         public bool Locked { get; set; }
@@ -26,6 +26,6 @@ namespace RITC_UI.Model
         public string? side { get; set; }
     }
 
- 
+
 
 }

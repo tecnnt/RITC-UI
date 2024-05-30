@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.IO.Packaging;
 using System.Linq;
@@ -13,47 +14,8 @@ using System.Windows.Media.Media3D;
 
 namespace RITC_UI.Model
 {
-    public static class PackageData
+    public static partial class PackageData
     {
-        public static void Load(string path)
-        {
-            //检查基础结构
-            if (!Directory.Exists(path))
-                throw new RITC_Exception("扩展包目录不存在！");
-            ModelPath = new ModelPathInfo(path);
-
-            //基础信息
-            if (File.Exists(ModelPath.Package))
-            {
-                Info = JsonConvert.DeserializeObject<RITC_Package>(File.ReadAllText(ModelPath.Package));
-                if (Info == null)
-                    throw new RITC_Exception("基础信息加载失败！");
-            }
-            //物品信息
-            if (Directory.Exists(ModelPath.Items))
-            {
-                Items = new List<RITC_Item>();
-                var files = Directory.GetFiles(ModelPath.Items);
-                foreach (string file in files)
-                {
-                    var item = JsonConvert.DeserializeObject<RITC_Item>(File.ReadAllText(file));
-                    if (item != null)
-                    {
-                        FileInfo fileInfo = new FileInfo(file);
-                        bool canModify = true;
-                        if (!fileInfo.Name.Equals($"{item._id}.json"))
-                        {
-                            var messageResult = MessageBox.Show("检查到文件名称与道具ID不一致，是否加载？注：加载后将会自动修改文件名称与道具ID一致", "警告！！！！", MessageBoxButton.YesNo);
-                            canModify = messageResult == MessageBoxResult.Yes;
-                            if (canModify)
-                                fileInfo.MoveTo(Path.Combine(ModelPath.Items, $"{item._id}.json"));
-                        }
-                        if (canModify) { Items.Add(item); }
-                    }
-                }
-            }
-
-        }
         /// <summary>
         /// 目录信息
         /// </summary>
@@ -98,7 +60,7 @@ namespace RITC_UI.Model
         /// <summary>
         /// 任务奖励
         /// </summary>
-        public static Dictionary<string, RITC_Quest_Reward>? QuestRewards { get; set; }
+        public static List<RITC_Quest_Reward>? QuestRewards { get; set; }
         /// <summary>
         /// 每日任务
         /// </summary>
@@ -118,13 +80,37 @@ namespace RITC_UI.Model
     {
         public DirectoryInfo? Folder { get; set; }
         public string? Package { get; set; }
-        public string? Items { get; internal set; }
+        public string? Locale { get; set; }
+        public string? Items { get; set; }
+        public string? Traders { get; set; }
+        public string? AssortData { get; set; }
+        public string? Quest { get; set; }
+        public string? QuestConditions { get; set; }
+        public string? QuestReward { get; set; }
+        public string? QuestRepeatable { get; set; }
+        public string? QuestDesc { get; set; }
+        public string? Bundles { get; set; }
+        public string? BundlePackage { get; set; }
+        public string? TraderImage { get; set; }
+        public string? OtherImage { get; set; }
 
         public ModelPathInfo(string path)
         {
             Folder = new DirectoryInfo(path);
             Package = Path.Combine(path, "package.json");
+            Locale = Path.Combine(path, "res", "locale", "text.json");
             Items = Path.Combine(path, "items", "ritcitem");
+            Traders = Path.Combine(path, "traders", "trader");
+            AssortData = Path.Combine(path, "traders", "AssortData.json");
+            Quest = Path.Combine(path, "traders", "questdata", "initQuest.json");
+            QuestConditions = Path.Combine(path, "traders", "questdata", "QuestConditions.json");
+            QuestReward = Path.Combine(path, "traders", "questdata", "QuestRewards.json");
+            QuestRepeatable = Path.Combine(path, "traders", "questdata", "RepeatableQuests.json");
+            QuestDesc = Path.Combine(path, "res", "locale", "quest.json");
+            Bundles = Path.Combine(path, "bundles.json");
+            BundlePackage = Path.Combine(path, "bundles");
+            TraderImage = Path.Combine(path, "res", "avatar");
+            OtherImage = Path.Combine(path, "res", "image");
         }
     }
 }

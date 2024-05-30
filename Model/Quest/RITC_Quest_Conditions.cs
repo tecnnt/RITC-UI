@@ -16,7 +16,7 @@ namespace RITC_UI.Model
 
     public class RITC_Quest_Start
     {
-        public RITC_Quest_Start_Conditions[]? Data { get; set; }
+        public List<RITC_Quest_Start_Conditions>? Data { get; set; }
         public bool Override { get; set; }
     }
     public class RITC_Quest_Start_Conditions
@@ -26,7 +26,7 @@ namespace RITC_UI.Model
 
     public class RITC_Quest_Finish
     {
-        public RITC_Quest_Finish_Conditions[]? Data { get; set; }
+        public List<RITC_Quest_Finish_Conditions>? Data { get; set; }
         public bool Override { get; set; }
     }
 
@@ -46,7 +46,7 @@ namespace RITC_UI.Model
 
     public class RITC_Quest_Fail
     {
-        public RITC_Quest_Fail_Conditions[]? Data { get; set; }
+        public List<RITC_Quest_Fail_Conditions>? Data { get; set; }
         public bool Override { get; set; }
     }
 
@@ -56,8 +56,8 @@ namespace RITC_UI.Model
         public string? type { get; set; }
         public bool oneraid { get; set; }
         public int count { get; set; }
-        public string[]? location { get; set; }
-        public string[]? status { get; set; }
+        public List<string>? location { get; set; }
+        public List<string>? status { get; set; }
         public bool chosenextractpoint { get; set; }
         public string? extractpoint { get; set; }
     }

@@ -17,7 +17,7 @@ namespace RITC_UI.Model
         public string? Desc { get; set; }
         public string? TraderID { get; set; }
         public string? Trader { get; set; }
-        public AKI_Item[]? Items { get; set; }
+        public List<AKI_Item>? Items { get; set; }
         public string? Skill { get; set; }
     }
 

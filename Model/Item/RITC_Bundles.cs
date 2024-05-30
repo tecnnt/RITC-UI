@@ -9,13 +9,13 @@ namespace RITC_UI.Model
 
     public class RITC_Bundles
     {
-        public Manifest[]? manifest { get; set; }
+        public List<Manifest>? manifest { get; set; }
     }
 
     public class Manifest
     {
         public string? key { get; set; }
-        public string[]? dependencyKeys { get; set; }
+        public List<string>? dependencyKeys { get; set; }
     }
 
 }

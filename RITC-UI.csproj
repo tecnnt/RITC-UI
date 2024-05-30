@@ -7,6 +7,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+    <SupportedOSPlatformVersion>7.0</SupportedOSPlatformVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -96,8 +97,12 @@
     <Content Include="Asset\res\image\illust_56884409_20190928_114254.jpg" />
     <Content Include="Asset\res\image\illust_69080429_20190928_113354.png" />
     <Content Include="Asset\res\image\illust_76542723_20190926_114401.jpg" />
-    <Content Include="Asset\res\locale\quest.json" />
-    <Content Include="Asset\res\locale\text.json" />
+    <Content Include="Asset\res\locale\quest.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Asset\res\locale\text.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Asset\SearchMap\Bundle索引.json" />
     <Content Include="Asset\SearchMap\任务ID查询.json" />
     <Content Include="Asset\SearchMap\原始任务文件.json" />
@@ -109,16 +114,36 @@
     <Content Include="Asset\SearchMap\物品ID查询.json" />
     <Content Include="Asset\SearchMap\藏身处ID查询.json" />
     <Content Include="Asset\SearchMap\跳蚤市场标签.json" />
-    <Content Include="Asset\traders\AssortData.json" />
-    <Content Include="Asset\traders\GiftData.json" />
-    <Content Include="Asset\traders\questdata\initQuest.json" />
-    <Content Include="Asset\traders\questdata\QuestConditions.json" />
-    <Content Include="Asset\traders\questdata\QuestRewards.json" />
-    <Content Include="Asset\traders\questdata\RepeatableQuests.json" />
-    <Content Include="Asset\traders\RecipeData.json" />
-    <Content Include="Asset\traders\ScavCaseData.json" />
-    <Content Include="Asset\traders\trader\ExampleTrader.json" />
-    <Content Include="Asset\traders\trader\ExampleTrader2.json" />
+    <Content Include="Asset\traders\AssortData.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Asset\traders\GiftData.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Asset\traders\questdata\initQuest.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Asset\traders\questdata\QuestConditions.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Asset\traders\questdata\QuestRewards.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Asset\traders\questdata\RepeatableQuests.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Asset\traders\RecipeData.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Asset\traders\ScavCaseData.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Asset\traders\trader\ExampleTrader.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Asset\traders\trader\ExampleTrader2.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>

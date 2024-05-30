@@ -46,8 +46,9 @@ namespace RITC_UI.Model
     }
     public class AKI_Item_Sight
     {
-        public int[]? ScopesCurrentCalibPointIndexes { get; set; }
-        public int[]? ScopesSelectedModes { get; set; }
+        public List<int>? ScopesCurrentCalibPointIndexes { get; set; }
+        public List<int>? ScopesSelectedModes { get; set; }
         public int SelectedScope { get; set; }
     }
+
 }

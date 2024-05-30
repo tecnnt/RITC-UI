@@ -4,33 +4,7 @@
             "key": "grassblock.pack",
 			"dependencyKeys": [
             ]
-        },
-        {
-            "key": "string",
-			"dependencyKeys": [
-            ]
-        },
-        {
-            "key": "string",
-			"dependencyKeys": [
-            ]
-        },
-        {
-            "key": "string",
-			"dependencyKeys": [
-            ]
-        },
-        {
-            "key": "string",
-			"dependencyKeys": [
-            ]
-        },
-        {
-            "key": "string",
-			"dependencyKeys": [
-            ]
         }
-
     ]
 
 }

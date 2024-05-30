@@ -66,7 +66,7 @@ namespace RITC_UI.Model
 
     public class RITC_Gift_Itempool_Chance
     {
-        public List<RITC_Gift_Item>[]? chanceup { get; set; }
-        public List<RITC_Gift_Item>[]? normal { get; set; }
+        public List<RITC_Gift_Item>? chanceup { get; set; }
+        public List<RITC_Gift_Item>? normal { get; set; }
     }
 }
