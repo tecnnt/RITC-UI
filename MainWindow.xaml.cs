@@ -27,22 +27,14 @@ namespace RITC_UI
             InitializeComponent();
         }
 
-        private void PackageLoad()
-        {
-            Package.DataContext = PackageData.Info;
-        }
-
-        private void Package_Initialized(object sender, EventArgs e)
-        {
-
-        }
+ 
 
         private void Menu_New_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void Menu_Open_Click(object sender, RoutedEventArgs e)
+        private async void Menu_Open_Click(object sender, RoutedEventArgs e)
         {
             OpenFolderDialog dialog = new OpenFolderDialog();
             dialog.DefaultDirectory = Environment.CurrentDirectory;
@@ -50,8 +42,7 @@ namespace RITC_UI
             string selectPath = dialog.FolderName;
             try
             {
-                PackageData.Load(selectPath);
-                PackageLoad();
+                Main_Tab.DataContext = await PackageData.LoadAsync(selectPath);
             }
             catch (RITC_Exception ritcex)
             {

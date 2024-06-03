@@ -1,0 +1,92 @@
+﻿<UserControl x:Class="RITC_UI.PackageInfoPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:RITC_UI"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="800">
+    <UserControl.Resources>
+        <Style TargetType="{x:Type GridViewColumnHeader}">
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid Background="#FFE5E5E5" x:Name="Package" DataContext="{Binding }">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="34"/>
+            <RowDefinition Height="34"/>
+            <RowDefinition Height="34"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Label Content="路径：" HorizontalAlignment="Left" Margin="8,0,0,0" VerticalAlignment="Center"/>
+        <TextBox Margin="66,0,0,0" TextWrapping="Wrap" Text="{Binding Directory,Mode=OneTime}" VerticalAlignment="Center" IsReadOnly="True"/>
+        <Label Content="名称：" HorizontalAlignment="Left" Margin="8,0,0,0" VerticalAlignment="Center" Grid.Row="1"/>
+        <TextBox Margin="66,0,0,0" TextWrapping="Wrap" Text="{Binding Name}" VerticalAlignment="Center" Grid.Row="1"/>
+        <Label Content="描述：" HorizontalAlignment="Left" Margin="8,0,0,0" VerticalAlignment="Center" Grid.Row="2"/>
+        <TextBox Margin="66,0,0,0" TextWrapping="Wrap" Text="{Binding Desc}" VerticalAlignment="Center" Grid.Row="2"/>
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="物资黑名单：" HorizontalAlignment="Left" VerticalAlignment="Top" />
+            <ListView ItemsSource="{Binding Config.LootBlackList}" Margin="0,25,0,0" >
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="物品编号"></GridViewColumn>
+                        <GridViewColumn Header="操作">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button>编辑</Button>
+                                        <Button>删除</Button>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <Label Content="自定义货币：" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="25"  Grid.Column="2"/>
+            <ListView ItemsSource="{Binding Config.LootBlackList}" Margin="0,25,0,0" Grid.Column="2">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="物品编号"></GridViewColumn>
+                        <GridViewColumn Header="操作">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button>编辑</Button>
+                                        <Button>删除</Button>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Grid>
+        <Label Content="物资生成映射：" HorizontalAlignment="Left" Margin="18,10,0,0" VerticalAlignment="Top" Grid.Row="4"/>
+        <ListView ItemsSource="{Binding Config.GenerateList}" Margin="16,48,24,8" Grid.Row="4">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="200" Header="物品编号" DisplayMemberBinding="{Binding Key}"></GridViewColumn>
+                    <GridViewColumn Width="200" Header="映射编号" DisplayMemberBinding="{Binding Value}"></GridViewColumn>
+                    <GridViewColumn Header="操作">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Button>编辑</Button>
+                                    <Button>删除</Button>
+                                </StackPanel>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</UserControl>

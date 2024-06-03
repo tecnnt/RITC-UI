@@ -18,9 +18,9 @@ namespace RITC_UI.Model
         }
         public string Name { get; set; }
         public string? Desc { get; set; }
-        public string? pathname { get { return PackageData.ModelPath?.Folder?.Name; } }
+        public string? pathname { get; set; }
         [JsonIgnore]
-        public string? Directory { get { return PackageData.ModelPath?.Folder?.FullName; } }
+        public string? Directory { get; set; }
         public RITC_Package_Config Config { get; set; }
     }
 

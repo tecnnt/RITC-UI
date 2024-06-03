@@ -8,6 +8,11 @@ namespace RITC_UI.Model
 {
     public class RITC_Trader
     {
+        public RITC_Trader()
+        {
+            loyaltyLevels = RITC_Trader_Loyaltylevel.CreateDefault();
+        }
+
         public string? _id { get; set; }
         public int balance_dol { get; set; }
         public int balance_eur { get; set; }
@@ -20,7 +25,7 @@ namespace RITC_UI.Model
         public RITC_Trader_Items_Buy? items_buy { get; set; }
         public RITC_Trader_Items_Buy_Prohibited? items_buy_prohibited { get; set; }
         public string? location { get; set; }
-        public List<RITC_Trader_Loyaltylevel>? loyaltyLevels { get; set; }
+        public List<RITC_Trader_Loyaltylevel> loyaltyLevels { get; set; }
         public string? name { get; set; }
         public string? description { get; set; }
         public string? nickname { get; set; }
@@ -73,6 +78,13 @@ namespace RITC_UI.Model
 
     public class RITC_Trader_Loyaltylevel
     {
+        public RITC_Trader_Loyaltylevel()
+        {
+            buy_price_coef = 100;
+            minLevel = 1;
+            repair_price_coef = 100;
+            insurance_price_coef = 10;
+        }
         public int buy_price_coef { get; set; }
         public int exchange_price_coef { get; set; }
         public int heal_price_coef { get; set; }
@@ -81,6 +93,16 @@ namespace RITC_UI.Model
         public int minSalesSum { get; set; }
         public float minStanding { get; set; }
         public int repair_price_coef { get; set; }
+
+        internal static List<RITC_Trader_Loyaltylevel> CreateDefault()
+        {
+            var result = new List<RITC_Trader_Loyaltylevel>();
+            result.Add(new RITC_Trader_Loyaltylevel());
+            result.Add(new RITC_Trader_Loyaltylevel());
+            result.Add(new RITC_Trader_Loyaltylevel());
+            result.Add(new RITC_Trader_Loyaltylevel());
+            return result;
+        }
     }
 
 }

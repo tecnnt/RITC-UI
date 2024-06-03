@@ -14,71 +14,71 @@ using System.Windows.Media.Media3D;
 
 namespace RITC_UI.Model
 {
-    public static partial class PackageData
+    public partial class PackageData
     {
         /// <summary>
         /// 目录信息
         /// </summary>
-        public static ModelPathInfo? ModelPath { get; set; }
+        public ModelPathInfo? ModelPath { get; set; }
 
         /// <summary>
         /// 基础信息
         /// </summary>
-        public static RITC_Package? Info { get; set; }
+        public RITC_Package? Info { get; set; }
         /// <summary>
         /// 物品信息
         /// </summary>
-        public static List<RITC_Item>? Items { get; set; }
+        public List<RITC_Item>? Items { get; set; }
 
         /// <summary>
         /// 商人信息
         /// </summary>
-        public static List<RITC_Trader>? Traders { get; set; }
+        public List<RITC_Trader>? Traders { get; set; }
 
         /// <summary>
         /// 交易信息
         /// </summary>
-        public static List<RITC_Assort>? Assorts { get; set; }
+        public List<RITC_Assort>? Assorts { get; set; }
 
         /// <summary>
         /// 礼盒（抽卡箱）信息
         /// </summary>
-        public static Dictionary<string, RITC_Gift>? Gifts { get; set; }
+        public Dictionary<string, RITC_Gift>? Gifts { get; set; }
 
         /// <summary>
         /// 任务信息
         /// </summary>
-        public static Dictionary<string, RITC_Quest>? Quests { get; set; }
+        public Dictionary<string, RITC_Quest>? Quests { get; set; }
         /// <summary>
         /// 任务描述
         /// </summary>
-        public static Dictionary<string, RITC_Quest_Desc>? QuestDesc { get; set; }
+        public Dictionary<string, RITC_Quest_Desc>? QuestDesc { get; set; }
         /// <summary>
         /// 任务条件
         /// </summary>
-        public static Dictionary<string, RITC_Quest_Conditions>? QuestConditions { get; set; }
+        public Dictionary<string, RITC_Quest_Conditions>? QuestConditions { get; set; }
         /// <summary>
         /// 任务奖励
         /// </summary>
-        public static List<RITC_Quest_Reward>? QuestRewards { get; set; }
+        public List<RITC_Quest_Reward>? QuestRewards { get; set; }
         /// <summary>
         /// 每日任务
         /// </summary>
-        public static Dictionary<string, RITC_Quest_Repeatable>? QuestRepeatable { get; set; }
+        public Dictionary<string, RITC_Quest_Repeatable>? QuestRepeatable { get; set; }
         /// <summary>
         /// 资源包信息
         /// </summary>
-        public static RITC_Bundles? Bundles { get; set; }
+        public RITC_Bundles? Bundles { get; set; }
         /// <summary>
         /// 本地化信息
         /// </summary>
-        public static Dictionary<string, string>? Locale { get; set; }
+        public Dictionary<string, string>? Locale { get; set; }
     }
 
 
     public class ModelPathInfo
     {
-        public DirectoryInfo? Folder { get; set; }
+        public DirectoryInfo Folder { get; set; }
         public string? Package { get; set; }
         public string? Locale { get; set; }
         public string? Items { get; set; }

@@ -1,0 +1,22 @@
+﻿<Window x:Class="RITC_UI.Assort"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RITC_UI"
+        mc:Ignorable="d"
+        Title="Assort" Height="450" Width="800">
+    <Grid>
+        <Label Content="物品编号"></Label>
+        <TextBox ></TextBox>
+        
+        <Label Content="信用等级"></Label>
+        <TextBox ></TextBox>
+
+        <Button>出售物品</Button>
+        <Button>物品售价</Button>
+
+        <CheckBox>是否锁定</CheckBox>
+        <Button>解锁条件</Button>
+    </Grid>
+</Window>
